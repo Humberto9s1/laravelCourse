@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomeController::Class {
-    return view('welcome');
-});
+Route::get('/', HomeController::class);
 
 Route::get('produtos/inserir', function () {
     return "Página de inserir produto";
@@ -30,6 +28,6 @@ Route::get('produtos/{nome}/{valor?}', function ($nome, $valor=null) {
     }    
 });
 
-Route::get('users', function () {
-    return "usuário";
+Route::get('produtos', function () {
+    return "Página de produtos";
 });
