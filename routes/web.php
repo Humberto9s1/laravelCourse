@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,18 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class);
 
-Route::get('produtos/inserir', function () {
-    return "Página de inserir produto";
-});
+Route::get('produtos/inserir', [ProdutosController::class, 'create']);
 
-Route::get('produtos/{nome}/{valor?}', function ($nome, $valor=null) {
-    if ($valor) {
-        return "O nome do produto é $nome e seu valor é $valor";    
-    }else{
-        return "O nome do produto é $nome!";    
-    }    
-});
+Route::get('produtos/{nome}/{valor?}', [ProdutosController::class, 'show']);
 
-Route::get('produtos', function () {
-    return "Página de produtos";
-});
+Route::get('produtos', [ProdutosController::class, 'index']);
