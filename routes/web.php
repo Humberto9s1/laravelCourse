@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomeController {
+Route::get('/', HomeController::Class {
     return view('welcome');
 });
 
