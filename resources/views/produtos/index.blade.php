@@ -2,7 +2,7 @@
 @section('title', 'Página Inicial')
 @section('content')
 <div class="container">
-<h1>Página dos Produtos</h1>
+<a href="produtos/inserir" type="button" class="mt-4 mb-4 btn btn-primary">Inserir Produtos</a>
 @foreach($produtos as $produto)
     <p>{{$produto->nome}}</p>
     @endforeach
