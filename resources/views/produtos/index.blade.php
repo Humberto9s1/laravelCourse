@@ -2,7 +2,7 @@
 @section('title', 'Página Inicial')
 @section('content')
 <div class="container">
-<a href="produtos/inserir" type="button" class="mt-4 mb-4 btn btn-primary">Inserir Produtos</a>
+<a href="{{route('produtos.inserir')}}" type="button" class="mt-4 mb-4 btn btn-primary">Inserir Produtos</a>
 
 
    <!-- DataTales Example -->
@@ -26,7 +26,9 @@
             <td>{{$produto->nome}}</td>
             <td>{{$produto->valor}}</td>
             <td>{{$produto->estoque}}</td>
-            <td></td>
+            <td>
+                <i class="far fa-eye"></i>
+            </td>
         </tr>
         @endforeach
       </tbody>
