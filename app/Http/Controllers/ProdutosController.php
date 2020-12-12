@@ -16,12 +16,22 @@ class ProdutosController extends Controller
         return view('produtos.create');    
     }
 
-    public function show($nome, $valor){
+    public function show($id){
+        return view('produtos.show', ['id' => $id]);    
+    }
+    
+       /*if ($valor) {
+            return "O nome do produto é $nome e seu valor é $valor";    
+        }else{
+            return "O nome do produto é $nome!";    
+        }
+
+    /*
+    public function show($nome, $valor=null){
         return view('produtos.show', ['nome' => $nome, 'valor' => $valor]);    
        /*if ($valor) {
             return "O nome do produto é $nome e seu valor é $valor";    
         }else{
             return "O nome do produto é $nome!";    
         }*/ 
-    }
 }

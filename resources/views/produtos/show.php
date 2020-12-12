@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>O nome do produto é <?php echo $nome ?> e seu valor é <?php echo $valor ?></h1>
+    <h1>O id do produto é <?php echo $id ?></h1>
 </body>
 </html>
